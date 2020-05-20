@@ -1,7 +1,8 @@
-import { LoginModule } from './account/login/LoginModule';
+import TestUserModule from './account/testUserInfo/TestUserModule';
+import { IModule } from "../common/ts/interfaces";
 
-const allModules: Array<object> = [
-    LoginModule
+const allModules: IModule[] = [
+    TestUserModule,
 ];
 
 export { allModules };

@@ -1,6 +1,8 @@
-export default function getRoutes(modules) {
+import {isFunc} from '../../common/utils/helper';
+
+export const getRoutes = (modules) => {
 	return modules
-		.filter(m => isFunc(m.getRoutes))
+		.filter(module => isFunc(module.getRoutes))
 		.reduce((routes, module) => {
 			const routesObject = module.getRoutes();
 			const routesArray = getRouteFromSection(routesObject);
@@ -16,8 +18,4 @@ function getRouteFromSection(routesObject) {
 		}
 		return [...prev, route];
 	}, []);
-}
-
-function isFunc(f) {
-	return typeof f === "function";
 }

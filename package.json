@@ -15,6 +15,7 @@
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.8.0",
+    "immer": "^6.0.5",
     "immutable": "^4.0.0-rc.12",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -23,6 +24,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-form": "^8.3.5",
+    "redux-freeze": "^0.1.7",
     "redux-immutablejs": "0.0.8"
   },
   "devDependencies": {
@@ -36,7 +38,9 @@
     "@types/immutable": "^3.8.7",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "@types/react-redux": "^7.1.8",
     "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
     "@types/webpack": "^4.41.13",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",

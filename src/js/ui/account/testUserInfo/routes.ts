@@ -1,13 +1,12 @@
-import { LoginView } from "./components/LoginView";
+import { UserViewComponent } from "./components/UserView";
 import { IRoute } from "../../../common/ts/interfaces";
 
 export function getRoutes(): IRoute {
     return {
         login: {
-            path: '/login',
+            path: '/',
             exact: true,
-            protected: false,
-            component: LoginView
+            component: UserViewComponent
         }
     }
 }

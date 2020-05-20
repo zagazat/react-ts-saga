@@ -1,15 +1,13 @@
-import * as React from "react";
-import * as ReactDom from "react-dom";
+import React from "react";
+import ReactDom from "react-dom";
 import { RootComponent } from "./common/components/RootComponent";
-// @ts-ignore
 import { Map } from "immutable";
-import configAppStore from "./core/configAppStore/index";
+// @ts-ignore
+import reduxApp from './core/reduxApp'
 import { allModules } from "./ui/allModules";
 
-const initialState = Map();
-
-// @ts-ignore
-const { store, routes, history } = configAppStore(allModules, initialState);
+const initialState = {};
+const { store, routes, history } = reduxApp(allModules, initialState);
 
 ReactDom.render(
     <RootComponent store={store} routes={routes} history={history} />,
