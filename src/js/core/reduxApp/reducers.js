@@ -1,5 +1,5 @@
-import {reducer as formReducer} from 'redux-form';
-import {isFunc} from '../../common/utils/helper';
+import { reducer as formReducer } from 'redux-form';
+import { isFunc } from '../../common/utils/helper';
 
 /**
  * Collect reducers from all modules
@@ -13,11 +13,11 @@ export const configureReducers = modules => {
 		.filter(module => isFunc(module.getReducers))
 		.reduce((reducers, module) => {
 			const r = module.getReducers(createReducer);
-			return {...reducers, ...r}
+			return { ...reducers, ...r }
 		}, reducers);
 };
 
-function defaultHandler(state, action) {
+function defaultHandler(state) {
 	return state;
 }
 

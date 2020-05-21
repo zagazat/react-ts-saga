@@ -1,4 +1,4 @@
-import {IUsersState, IPostsState} from "./interfaces";
+import { IUsersState, IPostsState } from './interfaces';
 
 export type UserType = {
     id: number

@@ -1,5 +1,5 @@
-import {all} from 'redux-saga/effects';
-import {isFunc} from '../../common/utils/helper';
+import { all } from 'redux-saga/effects';
+import { isFunc } from '../../common/utils/helper';
 
 export const configureSagas = (modules) => {
 	const sagas = modules

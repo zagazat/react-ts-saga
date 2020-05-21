@@ -1,13 +1,13 @@
 //import {createBrowserHistory} from 'history'
 import createSagaMiddleware from 'redux-saga';
 //import logger from 'redux-logger';
-import {getRoutes} from "./routes";
-import {configureStore} from './store';
-import {configureMiddlewares} from './middlewares';
-import {configureReducers} from './reducers';
-import {configureSagas} from './sagas';
-import {createBrowserHistory} from 'history';
-import {routerMiddleware} from 'connected-react-router/immutable';
+import { getRoutes } from './routes';
+import { configureStore } from './store';
+import { configureMiddlewares } from './middlewares';
+import { configureReducers } from './reducers';
+import { configureSagas } from './sagas';
+import { createBrowserHistory } from 'history';
+import { routerMiddleware } from 'connected-react-router/immutable';
 
 /**
  * @param modules
@@ -54,4 +54,4 @@ export default function(modules, initState) {
 		routes,
 		history
 	};
-};
+}

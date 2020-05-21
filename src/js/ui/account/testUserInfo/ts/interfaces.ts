@@ -1,5 +1,6 @@
-import {UserType, PostType} from "./types";
-import {IAsyncResponse} from "../../../../common/ts/interfaces";
+import { UserType, PostType } from './types';
+import { IAsyncResponse } from '../../../../common/ts/interfaces';
+import { CreatedAction } from '../../../../common/ts/types';
 
 export interface IUsersState extends IAsyncResponse {
     data: UserType[]
@@ -15,8 +16,8 @@ export interface IUserInfoStateProps {
 }
 
 export interface IUserInfoDispatchProps {
-    getTestUsers: () => void,
-    getPosts: () => void
+    getTestUsers: CreatedAction,
+    getPosts: CreatedAction
 }
 
 export interface IUserInfoOwnProps extends IUserInfoDispatchProps, IUserInfoStateProps {}

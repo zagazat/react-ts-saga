@@ -1,9 +1,4 @@
-interface Action {
-	payload: string | {
-		[key: string]: any
-	}
-	type: string
-}
+import { Action, ActionPayload, CreatedAsyncAction, CreatedAction } from '../ts/types';
 
 /**
  * Создает функцию "создания экшена" предварительно закидывая все в payload
@@ -13,9 +8,10 @@ interface Action {
  * @return {function(*=)}
  */
 
-export function createAction(type: string, args: {} = {}) {
-	const actionCreator = (payload = args) => {
-		return {type, payload};
+
+export function createAction(type: string, args: {} = {}): CreatedAction {
+	const actionCreator = (payload: ActionPayload = args): Action => {
+		return { type, payload };
 	};
 	actionCreator.toString = () => type;
 	return actionCreator;
@@ -26,10 +22,10 @@ export function createAction(type: string, args: {} = {}) {
  * @param {*} [args] defaultPayload
  * @return {{request: (function(*=)), success: (function(*=)), error: (function(*=))}}
  */
-export function createAsyncAction(type: string, args: {} = {}) {
+export function createAsyncAction(type: string, args: {} = {}): CreatedAsyncAction {
 	return {
-		request: createAction(`${type}.REQUEST`, args),
-		success: createAction(`${type}.SUCCESS`, args),
-		error: createAction(`${type}.ERROR`, args),
+		request: createAction(`${ type }.REQUEST`, args),
+		success: createAction(`${ type }.SUCCESS`, args),
+		error: createAction(`${ type }.ERROR`, args),
 	};
 }

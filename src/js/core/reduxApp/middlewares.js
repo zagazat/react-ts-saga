@@ -1,5 +1,5 @@
-import {applyMiddleware} from 'redux';
-import {isFunc} from '../../common/utils/helper';
+import { applyMiddleware } from 'redux';
+import { isFunc } from '../../common/utils/helper';
 
 /**
  * Inject custom middlewares from each modules

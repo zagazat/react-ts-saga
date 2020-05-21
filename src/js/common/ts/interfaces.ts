@@ -1,8 +1,9 @@
 import { History } from 'history';
 import { Store } from 'redux';
+import { IAsyncResponseError } from './types';
 
 export interface IRouter {
-    routes: Array<object>,
+    routes: Array<IRoute>,
     history: History,
     store: Store
 }
@@ -24,7 +25,5 @@ export interface IModule {
 
 export interface IAsyncResponse {
     loading: boolean
-    error: null | {
-        [key: string]: string | number
-    }
+    error: null | IAsyncResponseError
 }

@@ -1,4 +1,4 @@
-import {isFunc} from '../../common/utils/helper';
+import { isFunc } from '../../common/utils/helper';
 
 export const getRoutes = (modules) => {
 	return modules

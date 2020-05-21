@@ -1,8 +1,8 @@
-import {createStore, compose, combineReducers} from 'redux';
+import { createStore, compose, combineReducers } from 'redux';
 // import {combineReducers} from 'redux-immutablejs';
-import {connectRouter} from 'connected-react-router/immutable';
+import { connectRouter } from 'connected-react-router/immutable';
 
-export const configureStore = ({middleware, reducers, initState, history}) => {
+export const configureStore = ({ middleware, reducers, initState, history }) => {
 	const appReducers = combineReducers({
 		...reducers,
 		router: connectRouter(history)

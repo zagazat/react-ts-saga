@@ -22,7 +22,16 @@
     },
     "plugins": [
         "react",
+        "react-hooks",
         "@typescript-eslint"
+    ],
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "rules": {
+          "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+        }
+      }
     ],
     "rules": {
         "indent" : ["error", "tab", { "SwitchCase": 1 }],
@@ -64,7 +73,7 @@
         "quotes" : ["error", "single", {
             "avoidEscape": true
         }],
-        "template-curly-spacing": "error",
+        "template-curly-spacing": [2, "always"],
         "space-before-function-paren" : ["error", "never"],
         "space-before-blocks": "error",
         "function-paren-newline" : ["error", "multiline"],
@@ -97,10 +106,11 @@
         "react/jsx-props-no-multi-spaces": "error",
         "react/jsx-tag-spacing": ["error", {"beforeSelfClosing": "always"}],
         "react/self-closing-comp": "error",
-        "react/jsx-curly-spacing": ["error", {"when": "never"}],
+        "react/jsx-curly-spacing": [2, {"when": "always", "children": true} ],
         "react/jsx-indent": ["error", "tab"],
         "react/jsx-indent-props": ["error", "tab"],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        "object-curly-spacing": ["error", "always"]
     }
 }
