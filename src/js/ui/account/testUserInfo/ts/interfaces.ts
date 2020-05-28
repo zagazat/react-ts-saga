@@ -3,21 +3,21 @@ import { IAsyncResponse } from '../../../../common/ts/interfaces';
 import { CreatedAction } from '../../../../common/ts/types';
 
 export interface IUsersState extends IAsyncResponse {
-    data: UserType[]
+	data: UserType[];
 }
 
 export interface IPostsState extends IAsyncResponse {
-    data: PostType[]
+	data: PostType[];
 }
 
 export interface IUserInfoStateProps {
-    users: IUsersState,
-    posts: IPostsState
+	users: IUsersState;
+	posts: IPostsState;
 }
 
 export interface IUserInfoDispatchProps {
-    getTestUsers: CreatedAction,
-    getPosts: CreatedAction
+	getTestUsers: CreatedAction;
+	getPosts: CreatedAction;
 }
 
 export interface IUserInfoOwnProps extends IUserInfoDispatchProps, IUserInfoStateProps {}
